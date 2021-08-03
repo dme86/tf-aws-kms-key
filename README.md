@@ -6,9 +6,11 @@ Provides a KMS single-Region customer master key (CMK).
 
 ```hcl
 module "kms-key" {
-  source         = ""
-   tags          = {
-    Owner        = "foo"
+  source                  = "github.com/dme86/tf-aws-kms-key"
+  kms_key_del_window      = "11"
+  tags                    = {
+    Name                  = "KMS"
+    Foo                   = "Bar"
   }
 }
 ```
