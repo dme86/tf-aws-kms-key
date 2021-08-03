@@ -8,10 +8,12 @@ Provides a KMS single-Region customer master key (CMK).
 module "kms-key" {
   source                  = "github.com/dme86/tf-aws-kms-key?ref=v0.1"
   kms_key_del_window      = "11"
+
   tags                    = {
     Name                  = "KMS"
     Foo                   = "Bar"
   }
+
 }
 ```
 
